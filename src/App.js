@@ -13,6 +13,7 @@ import GenresInDatabase from './components/GenresInDatabase'
 
 
 
+
 function App() {
 
   /* const [games, setGames] = useState([])
@@ -88,6 +89,7 @@ function App() {
   return (
     <Fragment>
       <div className="App">
+
         <div id="wrapper">
           <Sidebar />
 
@@ -131,19 +133,22 @@ function App() {
 
 
             </div>
-          </div>
 
 
 
 
+            <Footer />
         </div>
 
 
 
+
+
+
+
       </div>
-      <Footer />
 
-
+      </div>
 
     </Fragment>
 
