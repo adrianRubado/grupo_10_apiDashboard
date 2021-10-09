@@ -1,67 +1,40 @@
 import React from 'react'
-import logo from '../assets/images/logo-DH.png'
+import Logo from './Logo'
+import NavItem from './NavItem'
+import SidebarLine from './SidebarLine'
+import Title from './Title'
 
 
 function Sidebar() {
+
+    const items = [
+        {
+            icon : 'fas fa-fw fa-folder',
+            title : 'Pages'
+        },
+        {
+            icon : 'fas fa-fw fa-chart-area',
+            title : 'Charts'
+        },
+        {
+            icon : 'fas fa-fw fa-table',
+            title : 'Tables'
+        }
+    ]
     return (
-
-
 
         <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-				<div className="sidebar-brand-icon">
-					<img className="w-100" src={logo} alt="Digital House"/>
-				</div>
-                </a>
-
-
-
-			<hr className="sidebar-divider my-0"/>
-
-
-			<li className="nav-item active">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard - DH movies</span>
-                </a>
-			</li>
-
-
-			<hr className="sidebar-divider"/>
-
-
+            <SidebarLine class = "sidebar-divider my-0"/>
+            <Logo/>
+            <Title title = 'My mad games'/>
+            <SidebarLine class = "sidebar-divider"/>
 			<div className="sidebar-heading">Actions</div>
 
-
-			<li className="nav-item">
-				<a className="nav-link collapsed" href="/">
-					<i className="fas fa-fw fa-folder"></i>
-					<span>Pages</span>
-                </a>
-
-			</li>
-
-
-			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span>
-                </a>
-			</li>
-
-
-			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span>
-                </a>
-			</li>
-
-
-			<hr className="sidebar-divider d-none d-md-block"/>
+            {items.map((i) => <NavItem icon = {i.icon} title = {i.title}/>)}
+			<SidebarLine class ="sidebar-divider d-none d-md-block"/>
 		</ul>
+
 
 
     )
