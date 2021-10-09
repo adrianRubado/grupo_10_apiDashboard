@@ -137,13 +137,16 @@ function App() {
     <div className="row">
 
             {genres.genres ? cards[1].card.genres.map((g,index) =>
+
             <div key = {g+index} className="col-lg-6 mb-4">
 											<div className="card bg-dark text-white shadow">
 												<div className="card-body">
+                        <a href = {g.detail}>
 													{g.name}
+                          </a>
 												</div>
 											</div>
-										</div>) : ''}
+										</div> ) : ''}
 
 
 									</div>
