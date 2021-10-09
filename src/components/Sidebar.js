@@ -31,7 +31,7 @@ function Sidebar() {
             <SidebarLine class = "sidebar-divider"/>
 			<div className="sidebar-heading">Actions</div>
 
-            {items.map((i) => <NavItem icon = {i.icon} title = {i.title}/>)}
+            {items.map((i,index) => <NavItem key = {i + index} icon = {i.icon} title = {i.title}/>)}
 			<SidebarLine class ="sidebar-divider d-none d-md-block"/>
 		</ul>
 
