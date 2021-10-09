@@ -62,7 +62,7 @@ function App() {
 
 
   const style = {
-    width : '40rem'
+    width : '25rem'
 
   };
   const cards = [
@@ -123,9 +123,9 @@ function App() {
                     <h5 className="m-0 font-weight-bold text-gray-800">Last game in Data Base</h5>
                 </div>
     <div className="text-center">
-                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={style} src={games.games ? games.games[5].Image : ''} alt=" Star Wars - Mandalorian "/>
+                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={style} src={games.games ? games.games[1].Image : ''}alt=" Star Wars - Mandalorian "/>
                 </div>
-                <p>{games.games ? games.games[5].Description : ''}</p>
+                <p>{games.games ? games.games[1].Description : ''}</p>
                 <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View game detail</a>
     </Container>
 
