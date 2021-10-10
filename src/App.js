@@ -122,7 +122,7 @@ function App() {
 
                   <Container>
 
-                    {genres.genres ? <GenresInDatabase genres={genres.genres} /> : ''}
+                    {genres.genres ? <GenresInDatabase genres={genres.genres} /> : 'loading...'}
                   </Container>
 
                 </div>
